@@ -1,0 +1,133 @@
+\documentclass[spanish,12pt]{report}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{graphicx,float}
+\usepackage{amsmath, amsthm}
+\usepackage{color}
+\usepackage{url}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+\textheight=24cm \textwidth=18cm \topmargin=-2cm \oddsidemargin=-1.2cm
+\setlength{\unitlength}{1 mm}
+\parindent=0pt
+
+\newcommand{\gfrac}[2]{\displaystyle{\frac{#1}{#2}}}
+
+\begin{document}
+
+\textsf{PROMiDAT Iberoamericano}
+
+\textsf{Deep Learning con Python}
+
+\textsf{Fundamentos Matemáticos del Deep Learning}
+
+\begin{itemize}
+{\color{Blue}
+\item  Las tareas tienen fecha de entrega una semana después a la clase y deben ser entregadas antes del inicio de la clase siguiente.
+\item  Cada día de atraso en implicará una pérdida de 10 puntos.
+\item  Las tareas son estrictamente de carácter individual, tareas iguales se les asignará cero puntos.
+\item  En nombre del archivo debe tener el siguiente formato: {\tt Tarea1\_nombre\_apellido.pdf}. Por ejemplo, si el nombre del estudiante es Luis Pérez: {\tt Tarea1\_luis\_perez.pdf}. Para la tarea número 2 sería: {\tt Tarea2\_luis\_perez.pdf}, y así sucesivamente.
+\item Esta tarea tiene un valor de un 25\% respecto a la nota total del curso.
+}
+\end{itemize}
+
+\begin{center}
+{\color{Red} \textbf{\LARGE\sc Tarea Número 1}}
+\end{center}
+
+\begin{itemize}
+
+\item {\bf{\color{Red} Ejercicio 1:}}  {\sf [5 puntos]}  Cree un tensor de 0D, 1D, 2D y 3D.
+
+\item {\bf{\color{Red} Ejercicio 2:}}  {\sf [5 puntos]}  Imprima las dimensiones ({\tt shape}) de {\tt MNIST}.
+
+\item {\bf{\color{Red} Ejercicio 3:}} {\sf [5 puntos]} ¿Qué tipo de datos contiene {\tt MNIST} ?.
+
+
+
+
+\item {\bf{\color{Red} Ejercicio 4:}} {\sf [20 puntos]}	La operación {\tt relu()} es una operación que se aplica entrada por entrada de un vector, esta devuelve el máximo entre cada entrada del vector y 0 ({\tt relu(x) = max(x,0)}). Reprograme esta función “a mano” en {\tt Python} usando un {\tt for} y después pruébela con el siguiente vector {\tt x}. 
+\begin{center}
+    {\tt x = np.array[-1,3,-0.2,15]}
+\end{center}
+Imprima el resultado
+
+
+\item {\bf{\color{Red} Ejercicio 5:}} {\sf [15 puntos]} 	Manualmente programe un “broadcast” para que el vector {\tt y = [4,1,1,5]} pueda ser sumado con el vector {\tt z = $\begin{bmatrix}
+   3 & 6 & 7 & 1 \\
+   2 & 6 & 2 & 9 \\
+   1 & 1 & 1 & 3 \\
+\end{bmatrix}$}.
+
+Imprimalo.
+
+\item {\bf{\color{Red} Ejercicio 6:}} {\sf [30 puntos]}	Calcule y muestre el procedimiento de las siguientes operaciónes de matrices:
+
+\begin{itemize}
+    \item $
+\begin{pmatrix}
+    8 & 4  \\
+    1 & 9  \\
+\end{pmatrix} \cdot
+\begin{pmatrix}
+    2 \\
+    5 \\
+\end{pmatrix}
+$
+\\
+\\
+    \item $
+\begin{pmatrix}
+    3 & 6  \\
+    5 & 4  \\
+\end{pmatrix} \cdot
+\begin{pmatrix}
+    1 & 3 \\
+    7 & 2 \\
+\end{pmatrix}
+$
+\\
+\\
+    \item $
+\begin{pmatrix}
+    8 & 5 & 1 \\
+    1 & 2 & 4 \\
+    7 & 3 & 2
+\end{pmatrix} \cdot
+\begin{pmatrix}
+    1 & 3 \\
+    4 & 5 \\
+    2 & 3
+\end{pmatrix}
+$
+\end{itemize}
+
+\item {\bf{\color{Red} Ejercicio 7:}} {\sf [15 puntos]} Calcule las siguientes derivadas. Muestre el procedimiento:
+
+\begin{itemize}
+    \item[a)] $f(x) = 4x$
+    \item[b)] $f(x) = 6x^2 + 12x$
+    \item[c)] $f(x) = \sqrt{x}$
+    \item[d)] $f(x) = \cos(x)$
+     \item[e)] $f(x) = 3 + \ln(x)$
+\end{itemize}
+
+\item {\bf{\color{Red} Ejercicio 8:}} {\sf [5 puntos]} Calcule el gradiente de la siguiente función
+
+$$
+f(x,y,z) = 3x^4 - 6xyz + 3yz
+$$
+
+\end{itemize}
+
+
+\vspace{2cm}
+
+\begin{center}
+\includegraphics[height=4cm]{logo.jpg}
+\end{center}
+
+\end{document}
+

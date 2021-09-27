@@ -1,0 +1,130 @@
+\documentclass[spanish,12pt]{report}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{graphicx,float}
+\usepackage{amsmath, amsthm}
+\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+
+\textheight=24cm \textwidth=18cm \topmargin=-2cm \oddsidemargin=-1.2cm
+\setlength{\unitlength}{1 mm}
+\parindent=0pt
+
+\newcommand{\gsum}[2]{\mbox{$ \displaystyle{\sum_{#1}^{#2}} $}}
+
+\begin{document}
+
+\textsf{PROMiDAT Iberoamericano}
+
+\textsf{Deep Learning con Python}
+
+\textsf{Redes Neuronales Recurrentes:}
+
+\begin{itemize}
+{\color{Blue}
+\item  Las tareas tienen como fecha de entrega una semana después a la clase y deben ser entregadas antes del inicio de la clase siguiente.
+\item  Cada día de atraso implicará una pérdida de 10 puntos.
+\item  Las tareas son estrictamente de carácter individual, tareas iguales se les asignará cero puntos.
+\item  El nombre del archivo debe tener el siguiente formato: {\tt Tarea1\_nombre\_apellido.pdf}. Por ejemplo, si el nombre del estudiante es Luis Pérez: {\tt Tarea1\_luis\_perez.pdf}. Para la tarea número 2 sería: {\tt Tarea2\_luis\_perez.pdf}, y así sucesivamente.
+\item  El puntaje de cada pregunta se indica en su encabezado.
+\item Esta tarea tiene un valor de un 25\% respecto a la nota total del curso.
+}
+\end{itemize}
+
+\begin{center}
+{\color{Green} \textbf{\LARGE\sc Tarea Número 1}}
+\end{center}
+
+\begin{itemize}
+
+\item {\bf{\color{Red} Ejercicio 1:}} {\sf [40 puntos]} En este ejercicio usaremos las acciones de diferentes empresas disponibles en {\tt yahoo}, publicadas en el siguiente enlace
+
+\begin{center}
+    \url{https://es-us.finanzas.yahoo.com/}
+\end{center}
+
+Elija una empresa de su interés y utilicela para el realizar el modelo y los siguientes ejercicios.
+
+Realice lo siguiente:
+
+\begin{enumerate}
+\item Descargue los precios de los datos históricos de enero del 2015 hasta diciembre del 2020, en frecuencia diaria.
+
+\item Cargue los datos y asegurese de agregar el parámetro {\tt parse\_dates=['Date']}
+
+\item Utilice para el {\tt training} los datos desde enero 2015 hasta diciembre del 2018 y para {\tt testing} los datos del 2019. Seleccione la columna {\tt High}
+
+\item Escale los datos de {\tt training}.
+
+\item Tome bloques de 5 datos consecutivos para entrenar la red y que el dato "6" sea usado como la salida de la red.
+
+\item  Escale los datos de {\tt testing} y reordenelos como bloques también.
+
+\item Definir el tamaño de los datos de entrada y del dato de salida, así como el número total de neuronas.   
+
+\item Haga el modelo usando la función de activación {\tt relu} y con las capas que considere necesarias. Utilice la función de optimización {\tt adam}, la función de costo {\tt mse}.
+
+\item Haga un resumen del modelo.
+
+\item Haga una predicción usando 32 bloques y 500 {\tt epochs}, use {\tt x\_test} para validar.
+
+\item Genere la matriz de confusión  y haga una visualización de esta.
+
+\item Calcule la precisión global. Interprete
+la calidad de los resultados.
+
+\end{enumerate}
+
+
+
+\item {\bf{\color{Red} Ejercicio 2:}} {\sf [40 puntos]} En este ejercicio vamos a intentar predecir la letra que sigue del alfabeto griego. Cabe resaltar que no existe un mapeo exacto del abecedario al nuestro y que el número de letras es inferior al nuestro también.
+
+Copie y pegue el siguiente código y utilicelo cómo set de datos.
+
+\begin{center}
+   \tt{alfabetoGriego = $"\alpha\beta\gamma\delta\epsilon\zeta\eta\theta\iota\kappa\lambda\mu\nu\xi\o\pi\rho\sigma\tau\upsilon\phi\chi\psi\omega"$}
+ 
+\end{center}
+
+
+
+Para esto realice lo siguiente:
+
+\begin{enumerate}
+
+\item  Defina un conjunto con los diferentes caracteres que conforman el set.
+
+\item Cree un diccionario que permita definir la equivalencia entre caracter e índice, así como su inverso.
+
+\item Haga los pares de entrada y salida para entrenar el modelo y transforme al formato esperado por la red.
+
+\item Normalice los datos y trasforme la variable a predecir a formato 'One-Hot'.
+
+\item Haga el modelo usando la función de activación {\tt softmax} y con las capas que considere necesarias. Utilice la función de optimización {\tt RMSProp}, la función de costo {\tt categorical\_crossentropy} y las métricas {\tt accuracy}.
+
+\item Haga un resumen del modelo.
+
+\item Haga una predicción entrenando el modelo con 500 {\tt epochs} y un tamaño de lote igual a 1.
+
+\item Genere la matriz de confusión.
+
+\item Calcule la precisión global. Interprete
+la calidad de los resultados.
+
+\item Repita el ejercicio 5 pero esta vez utilice como optimizador la función {\tt adam}. Compare resultados.
+
+\end{enumerate}
+
+
+
+\begin{center}
+\includegraphics[height=8cm]{Logo.jpg}
+\end{center}
+
+\end{itemize}
+\end{document}
+
+

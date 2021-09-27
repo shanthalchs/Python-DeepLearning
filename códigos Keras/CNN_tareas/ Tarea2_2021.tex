@@ -1,0 +1,130 @@
+\documentclass[spanish,12pt]{report}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{graphicx,float}
+\usepackage{amsmath, amsthm}
+\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+
+\textheight=24cm \textwidth=18cm \topmargin=-2cm \oddsidemargin=-1.2cm
+\setlength{\unitlength}{1 mm}
+\parindent=0pt
+
+\newcommand{\gsum}[2]{\mbox{$ \displaystyle{\sum_{#1}^{#2}} $}}
+
+\begin{document}
+
+\textsf{PROMiDAT Iberoamericano}
+
+\textsf{Deep Learning}
+
+\textsf{Instrucciones:}
+
+\begin{itemize}
+{\color{Blue}
+\item  Las tareas tienen como fecha de entrega una semana después a la clase y deben ser entregadas antes del inicio de la clase siguiente.
+\item  Cada día de atraso implicará una pérdida de 10 puntos.
+\item  Las tareas son estrictamente de carácter individual, tareas iguales se les asignará cero puntos.
+\item  El nombre del archivo debe tener el siguiente formato: {\tt Tarea1\_nombre\_apellido.pdf}. Por ejemplo, si el nombre del estudiante es Luis Pérez: {\tt Tarea1\_luis\_perez.pdf}. Para la tarea número 2 sería: {\tt Tarea2\_luis\_perez.pdf}, y así sucesivamente.
+\item  El puntaje de cada pregunta se indica en su encabezado.
+\item Esta tarea tiene un valor de un 25\% respecto a la nota total del curso.
+}
+\end{itemize}
+
+\begin{center}
+{\color{Green} \textbf{\LARGE\sc Tarea Número 1}}
+\end{center}
+
+\begin{itemize}
+
+\item {\bf{\color{Red} Ejercicio 1:}} {\sf [40 puntos]} Este conjunto de datos  tiene 10 clases que contienen 600 imágenes cada una. Hay 500 imágenes de entrenamiento y 100 imágenes de prueba por clase. Cada imagen viene con una etiqueta "fina" (la clase a la que pertenece). El objetivo del conjunto de datos es predecir de forma diagnóstica si un paciente tiene diabetes o no, basándose en determinadas medidas de diagnóstico incluidas en el conjunto de datos.
+
+El conjunto de datos tiene 390 filas y 16 columnas.
+
+\begin{itemize}
+
+\item {\tt  Clase 0}: Manzana. 
+\item {\tt  Clase 1}: Pez. 
+\item {\tt  Clase 2}: Bebé.
+\item {\tt  Clase 3}: Oso.
+\item {\tt  Clase 4}: Castor.
+\item {\tt  Clase 5}: Cama.
+\item {\tt  Clase 6}: Abeja.
+\item {\tt  Clase 7}: Escarabajo.
+\item {\tt  Clase 8}: Bicicleta.
+\item {\tt  Clase 9}: Botella.
+
+
+
+\end{itemize}
+
+Realice lo siguiente:
+
+\begin{enumerate}
+\item Cargue las tablas de datos  \texttt{imagenes\_x\_train.npy}, \texttt{imagenes\_y\_train.npy}, \texttt{imagenes\_x\_test.npy} y  \texttt{imagenes\_y\_test.npy}  en {\tt Python}. {\bf }.
+
+\item Pase las tablas de las categórias (\texttt{imagenes\_y\_train.npy} y \texttt{imagenes\_y\_test.npy}) a la forma {\bf one-hot-encoding} 
+
+\item Imprima una imagen de la tabla \texttt{imagenes\_x\_train.npy}
+
+\item Normalice las imágenes de las tablas .   
+
+\item Haga el modelo usando la función de activación {\tt relu} y con las capas que considere necesarias. Utilice la función de optimización {\tt sgd}, la función de costo {\tt categorical\_crossentropy} y las métricas {\tt acc} y {\tt mse}.
+
+\item Haga un resumen del modelo.
+
+\item Haga una predicción usando 32 bloques y 5 {\tt epochs}, use {\tt x\_test} para validar.
+
+\item Genere la matriz de confusión  y haga una visualización de esta.
+
+\item Calcule la precisión global. Interprete
+la calidad de los resultados.
+
+\item Comente los resultados.
+
+\end{enumerate}
+
+
+
+\item {\bf{\color{Red} Ejercicio 2:}} {\sf [40 puntos]} En este ejercicio vamos a usar las tablas de datos {\tt ZipDataTestCod.csv} {\tt ZipDataTrainCod.csv}, estos son archivos en csv, donde la primera columna guarda la información de tipo de digito es: un numero del 0 al 9, mientras que las otras 256 columnas guardan la información de cada pixel, para una imagen de 16x16 de un solo canal. La información de los csv son de tipo {\tt int}.
+
+
+Para esto realice lo siguiente:
+
+\begin{enumerate}
+\item Cargue las tablas de datos  {\tt ZipDataTestCod.csv} {\tt ZipDataTrainCod.csv} en {\tt Python}. {\bf }.
+
+\item Cree las tablas de las categórias ({\tt Y\_train}  y {\tt Y\_test}) y paselas a la forma {\bf one-hot-encoding} 
+
+\item Cree las tablas de las imágenes ({\tt X\_train}  y {\tt X\_test}) y seguidamente normalice dichas tablas.
+
+\item Imprima una imagen de la tabla \texttt{X\_train}
+
+\item Haga el modelo usando la función de activación {\tt relu} y con las capas que considere necesarias. Utilice la función de optimización {\tt adam}, la función de costo {\tt categorical\_crossentropy} y las métricas {\tt acc} y {\tt mse}.
+
+\item Haga un resumen del modelo.
+
+\item Haga una predicción usando 86 bloques y 10 {\tt epochs}, use {\tt x\_test} para validar.
+
+\item Genere la matriz de confusión  y haga una visualización de esta.
+
+\item Calcule la precisión global. Interprete
+la calidad de los resultados.
+
+\item Comentes los resultados.
+
+\end{enumerate}
+
+
+
+\begin{center}
+\includegraphics[height=8cm]{Logo.jpg}
+\end{center}
+
+\end{itemize}
+\end{document}
+
+
